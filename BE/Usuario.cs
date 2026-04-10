@@ -31,5 +31,14 @@ namespace BE
 			set { password = value; }
 		}
 
+		private int logeado;
+
+		public int Logeado
+		{
+			get { return logeado; }
+			set { logeado = value; }
+		}
+
+
 	}
 }

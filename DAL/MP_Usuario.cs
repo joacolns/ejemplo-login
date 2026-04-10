@@ -1,6 +1,7 @@
 ﻿using BE;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -22,7 +23,9 @@ namespace DAL
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@Nombre", objeto.ToString()));
             parametros.Add(acceso.CrearParametro("@Password", objeto.ToString()));
-            int resultado = acceso.Escribir("LogearUsuario", parametros);
+            //parametros.Add(acceso.CrearParametro("@Logeado", int.Parse(objeto.ToString())));
+            int resultado = acceso.Escribir("Login", parametros);
+            objeto.Logeado = resultado;
 
             return resultado;
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Usuario
+    public class Usuario
     {
         public int Login(BE.Usuario usuario)
         {
